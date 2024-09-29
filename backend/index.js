@@ -8,7 +8,9 @@ const path = require('path')
 const cors = require('cors');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000"
+}));
 
 // Database connection with mongodb
 mongoose.connect("mongodb+srv://gyllianerae:HAAqzOWOBMQGcEi6@cluster0.f2kflsr.mongodb.net/e-commerce?retryWrites=true&w=majority&appName=Cluster0");
