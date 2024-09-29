@@ -16,12 +16,15 @@ const ShopContextProvider = (props) => {
     const [cartItems,setCartItems] = useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('https://shapi-ecommerce-backend.onrender.com/allproducts')
+        fetch('https://shapi-ecommerce-backend.onrender.com/allproducts', {
+            mode: 'no-cors',
+        })
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
             fetch('https://shapi-ecommerce-backend.onrender.com/getcart',{
+                mode: 'no-cors',
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -38,6 +41,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
             fetch('https://shapi-ecommerce-backend.onrender.com/addtocart',{
+                mode: 'no-cors',
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -55,6 +59,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
         if(localStorage.getItem('auth-token')){
             fetch('https://shapi-ecommerce-backend.onrender.com/removefromcart',{
+                mode: 'no-cors',
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',

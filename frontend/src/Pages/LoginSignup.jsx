@@ -19,6 +19,7 @@ const LoginSignup = () => {
     console.log('login function executed',formData);
     let responseData;
     await fetch('https://shapi-ecommerce-backend.onrender.com/login',{
+      mode: 'no-cors',
       method:'POST',
       headers:{
         Accept:'application/json',
