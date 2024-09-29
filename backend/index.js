@@ -8,22 +8,8 @@ const path = require('path')
 const cors = require('cors');
 
 app.use(express.json());
-const allowedOrigins = [
-    "https://shapi-ecommerce-frontend.onrender.com",
-    "http://localhost:3000", // Add other origins as needed
-    // You can add more origins here
-];
-
 app.use(cors({
-    origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === -1) {
-            const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
-            return callback(new Error(msg), false);
-        }
-        return callback(null, true);
-    },
+    origin: "https://shapi-ecommerce-frontend.onrender.com"
 }));
 
 // Database connection with mongodb
