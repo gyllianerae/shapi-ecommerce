@@ -9,3 +9,5 @@ deployments:
 frontend: https://shapi-ecommerce-frontend.onrender.com/
 admin: https://shapi-ecommerce-admin.onrender.com/listproduct
 backend: https://shapi-ecommerce-admin.onrender.com/listproduct
+
+Backend can only be fetched from https://shapi-ecommerce-frontend.onrender.com/
