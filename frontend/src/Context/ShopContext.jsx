@@ -17,7 +17,6 @@ const ShopContextProvider = (props) => {
 
     useEffect(()=>{
         fetch('https://shapi-ecommerce-backend.onrender.com/allproducts', {
-            mode: 'no-cors',
         })
         .then((response)=>response.json())
         .then((data)=>setAll_Product(data))

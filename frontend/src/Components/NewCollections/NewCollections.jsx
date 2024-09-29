@@ -8,7 +8,6 @@ const NewCollections = () => {
 
   useEffect(()=>{
     fetch('https://shapi-ecommerce-backend.onrender.com/newcollections', {
-      mode: 'no-cors',
     })
     .then((response)=>response.json())
     .then((data)=>setNew_collection(data));
