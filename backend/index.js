@@ -11,13 +11,9 @@ app.use(express.json());
 app.use(cors());
 
 // Database connection with mongodb
-<<<<<<< HEAD
 mongoose.connect("mongodb+srv://gyllianerae:HAAqzOWOBMQGcEi6@cluster0.f2kflsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 
-=======
-mongoose.connect("mongodb+srv://gyllianerae:834ePrNVadYeqCMa@cluster0.f2kflsr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
->>>>>>> 812f64acf21316879708f7c9e1a909761ea9f54a
 
 // API creation
 
