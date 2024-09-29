@@ -23,7 +23,6 @@ const ShopContextProvider = (props) => {
 
         if(localStorage.getItem('auth-token')){
             fetch('https://shapi-ecommerce-backend.onrender.com/getcart',{
-                mode: 'no-cors',
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
